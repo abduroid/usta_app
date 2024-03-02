@@ -45,9 +45,17 @@ gradlePlugin {
             id = "kallapp.android.library.compose"
             implementationClass = "AndroidLibraryComposeConventionPlugin"
         }
+        register("androidFeature") {
+            id = "kallapp.android.feature"
+            implementationClass = "AndroidFeatureConventionPlugin"
+        }
         register("androidLibrary") {
             id = "kallapp.android.library"
             implementationClass = "AndroidLibraryConventionPlugin"
+        }
+        register("androidLibraryJacoco") {
+            id = "kallapp.android.library.jacoco"
+            implementationClass = "AndroidLibraryJacocoConventionPlugin"
         }
         register("androidTest") {
             id = "kallapp.android.test"
@@ -60,6 +68,14 @@ gradlePlugin {
         register("androidRoom") {
             id = "kallapp.android.room"
             implementationClass = "AndroidRoomConventionPlugin"
+        }
+        register("androidFlavors") {
+            id = "kallapp.android.application.flavors"
+            implementationClass = "AndroidApplicationFlavorsConventionPlugin"
+        }
+        register("jvmLibrary") {
+            id = "kallapp.jvm.library"
+            implementationClass = "JvmLibraryConventionPlugin"
         }
     }
 }

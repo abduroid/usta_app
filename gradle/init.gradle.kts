@@ -15,7 +15,6 @@
  */
 
 val ktlintVersion = "1.0.1"
-print("this is printed in init.gradle.kts")
 
 initscript {
     val spotlessVersion = "6.23.3"
@@ -39,6 +38,7 @@ rootProject {
                 ktlint(ktlintVersion).editorConfigOverride(
                     mapOf(
                         "android" to "true",
+                        "ktlint_function_naming_ignore_when_annotated_with" to "Composable"
                     ),
                 )
                 licenseHeaderFile(rootProject.file("spotless/copyright.kt"))

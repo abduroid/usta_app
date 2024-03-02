@@ -15,4 +15,22 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "kallapp"
+
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 include(":app")
+include(":core:model")
+include(":core:common")
+include(":core:testing")
+include(":core:network")
+include(":core:data")
+include(":core:data-test")
+include(":core:database")
+include(":core:datastore")
+include(":core:datastore-proto")
+include(":core:datastore-test")
+include(":core:designsystem")
+include(":core:domain")
+include(":core:notifications")
+include(":core:ui")
+
+include(":feature:schedule")

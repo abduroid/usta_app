@@ -1,0 +1,15 @@
+/*
+ *
+ * These are temporary example protos
+ */
+
+syntax = "proto3";
+
+option java_package = "com.example.kallapp.core.datastore";
+option java_multiple_files = true;
+
+enum ThemeBrandProto {
+  THEME_BRAND_UNSPECIFIED = 0;
+  THEME_BRAND_DEFAULT = 1;
+  THEME_BRAND_ANDROID = 2;
+}

@@ -1,0 +1,4 @@
+<resources>
+<!--    TODO temporary-->
+    <string name="core_notifications_news_notification_channel_name">News updates</string>
+</resources>
