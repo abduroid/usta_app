@@ -1,16 +1,16 @@
 plugins {
-    alias(libs.plugins.kallapp.android.library)
-    alias(libs.plugins.kallapp.android.library.jacoco)
-    alias(libs.plugins.kallapp.android.hilt)
-    alias(libs.plugins.kallapp.android.room)
+    alias(libs.plugins.ustaapp.android.library)
+    alias(libs.plugins.ustaapp.android.library.jacoco)
+    alias(libs.plugins.ustaapp.android.hilt)
+    alias(libs.plugins.ustaapp.android.room)
 }
 
 android {
     defaultConfig {
         testInstrumentationRunner =
-            "com.example.kallapp.core.testing.KallaTestRunner"
+            "com.example.usta_app.core.testing.UstaTestRunner"
     }
-    namespace = "com.example.kallapp.core.database"
+    namespace = "com.example.usta_app.core.database"
 }
 
 dependencies {

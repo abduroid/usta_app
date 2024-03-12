@@ -15,7 +15,7 @@
  */
 
 import com.android.build.gradle.LibraryExtension
-import com.example.kallapp.configureAndroidCompose
+import com.example.usta_app.configureAndroidCompose
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.getByType

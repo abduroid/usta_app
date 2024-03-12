@@ -34,6 +34,7 @@ protobuf = "3.24.4"
 protobufPlugin = "0.9.4"
 robolectric = "4.11.1"
 roborazzi = "1.6.0"
+threetenabp = "1.4.6"
 
 
 
@@ -78,7 +79,7 @@ protobuf-protoc = { group = "com.google.protobuf", name = "protoc", version.ref 
 roborazzi = { group = "io.github.takahirom.roborazzi", name = "roborazzi", version.ref = "roborazzi" }
 robolectric = { group = "org.robolectric", name = "robolectric", version.ref = "robolectric" }
 javax-inject = { module = "javax.inject:javax.inject", version = "1" }
-
+threetenabp = { group = "com.jakewharton.threetenabp", name = "threetenabp", version.ref = "threetenabp" }
 
 
 # Dependencies of the included build-logic
@@ -106,14 +107,14 @@ roborazzi = { id = "io.github.takahirom.roborazzi", version.ref = "roborazzi" }
 
 
 # Plugins defined by this project
-kallapp-android-application = { id = "kallapp.android.application", version = "unspecified" }
-kallapp-android-application-compose = { id = "kallapp.android.application.compose", version = "unspecified" }
-kallapp-android-application-flavors = { id = "kallapp.android.application.flavors", version = "unspecified" }
-kallapp-android-feature = { id = "kallapp.android.feature", version = "unspecified" }
-kallapp-android-hilt = { id = "kallapp.android.hilt", version = "unspecified" }
-kallapp-jvm-library = { id = "kallapp.jvm.library", version = "unspecified" }
-kallapp-android-library = { id = "kallapp.android.library", version = "unspecified" }
-kallapp-android-library-compose = { id = "kallapp.android.library.compose", version = "unspecified" }
-kallapp-android-library-jacoco = { id = "kallapp.android.library.jacoco", version = "unspecified" }
-kallapp-android-room = { id = "kallapp.android.room", version = "unspecified" }
+ustaapp-android-application = { id = "usta_app.android.application", version = "unspecified" }
+ustaapp-android-application-compose = { id = "usta_app.android.application.compose", version = "unspecified" }
+ustaapp-android-application-flavors = { id = "usta_app.android.application.flavors", version = "unspecified" }
+ustaapp-android-feature = { id = "usta_app.android.feature", version = "unspecified" }
+ustaapp-android-hilt = { id = "usta_app.android.hilt", version = "unspecified" }
+ustaapp-jvm-library = { id = "usta_app.jvm.library", version = "unspecified" }
+ustaapp-android-library = { id = "usta_app.android.library", version = "unspecified" }
+ustaapp-android-library-compose = { id = "usta_app.android.library.compose", version = "unspecified" }
+ustaapp-android-library-jacoco = { id = "usta_app.android.library.jacoco", version = "unspecified" }
+ustaapp-android-room = { id = "usta_app.android.room", version = "unspecified" }
 

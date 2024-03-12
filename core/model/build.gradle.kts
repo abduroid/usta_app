@@ -1,3 +1,7 @@
 plugins {
-    alias(libs.plugins.kallapp.jvm.library)
+    alias(libs.plugins.ustaapp.jvm.library)
+}
+
+dependencies {
+    api(libs.threetenabp)
 }

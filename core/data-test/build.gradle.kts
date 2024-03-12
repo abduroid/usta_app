@@ -1,10 +1,10 @@
 plugins {
-    alias(libs.plugins.kallapp.android.library)
-    alias(libs.plugins.kallapp.android.hilt)
+    alias(libs.plugins.ustaapp.android.library)
+    alias(libs.plugins.ustaapp.android.hilt)
 }
 
 android {
-    namespace = "com.example.kallapp.core.data.test"
+    namespace = "com.example.usta_app.core.data.test"
 }
 
 dependencies {

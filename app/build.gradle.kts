@@ -1,20 +1,20 @@
-import com.example.kallapp.KallaBuildType
+import com.example.usta_app.UstaBuildType
 
 plugins {
-    alias(libs.plugins.kallapp.android.application)
-    alias(libs.plugins.kallapp.android.application.compose)
-    alias(libs.plugins.kallapp.android.hilt)
-    alias(libs.plugins.kallapp.android.application.flavors)
+    alias(libs.plugins.ustaapp.android.application)
+    alias(libs.plugins.ustaapp.android.application.compose)
+    alias(libs.plugins.ustaapp.android.hilt)
+    alias(libs.plugins.ustaapp.android.application.flavors)
 }
 
 android {
-    namespace = "com.example.kallapp"
+    namespace = "com.example.usta_app"
     defaultConfig {
-        applicationId = "com.example.kallapp"
+        applicationId = "com.example.usta_app"
         versionCode = 1
         versionName = "1.0"
 
-        testInstrumentationRunner = "com.example.kallapp.core.testing.KallaTestRunner"
+        testInstrumentationRunner = "com.example.usta_app.core.testing.UstaTestRunner"
         vectorDrawables {
             useSupportLibrary = true
         }
@@ -22,11 +22,11 @@ android {
 
     buildTypes {
         debug {
-            applicationIdSuffix = KallaBuildType.DEBUG.applicationIdSuffix
+            applicationIdSuffix = UstaBuildType.DEBUG.applicationIdSuffix
         }
         val release = getByName("release") {
             isMinifyEnabled = true
-            applicationIdSuffix = KallaBuildType.RELEASE.applicationIdSuffix
+            applicationIdSuffix = UstaBuildType.RELEASE.applicationIdSuffix
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
 
             // To publish on the Play store a private signing key is required, but to allow anyone

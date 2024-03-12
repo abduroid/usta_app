@@ -1,10 +1,10 @@
 plugins {
-    alias(libs.plugins.kallapp.android.library)
+    alias(libs.plugins.ustaapp.android.library)
     alias(libs.plugins.protobuf)
 }
 
 android {
-    namespace = "com.example.kallapp.core.datastore.proto"
+    namespace = "com.example.usta_app.core.datastore.proto"
 }
 
 // Setup protobuf configuration, generating lite Java and Kotlin classes

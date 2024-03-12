@@ -14,7 +14,7 @@
  *   limitations under the License.
  */
 
-import com.example.kallapp.libs
+import com.example.usta_app.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.dependencies

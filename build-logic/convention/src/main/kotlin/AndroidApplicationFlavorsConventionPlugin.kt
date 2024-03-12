@@ -1,5 +1,5 @@
 import com.android.build.api.dsl.ApplicationExtension
-import com.example.kallapp.configureFlavors
+import com.example.usta_app.configureFlavors
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure

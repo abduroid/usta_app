@@ -1,11 +1,11 @@
 plugins {
-    alias(libs.plugins.kallapp.android.library)
-    alias(libs.plugins.kallapp.android.library.jacoco)
-    alias(libs.plugins.kallapp.android.hilt)
+    alias(libs.plugins.ustaapp.android.library)
+    alias(libs.plugins.ustaapp.android.library.jacoco)
+    alias(libs.plugins.ustaapp.android.hilt)
 }
 
 android {
-    namespace = "com.example.kallapp.core.common"
+    namespace = "com.example.usta_app.core.common"
 }
 
 dependencies {

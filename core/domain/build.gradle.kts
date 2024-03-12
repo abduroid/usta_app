@@ -1,11 +1,11 @@
 plugins {
-    alias(libs.plugins.kallapp.android.library)
-    alias(libs.plugins.kallapp.android.library.jacoco)
+    alias(libs.plugins.ustaapp.android.library)
+    alias(libs.plugins.ustaapp.android.library.jacoco)
     id("com.google.devtools.ksp")
 }
 
 android {
-    namespace = "com.example.kallapp.core.domain"
+    namespace = "com.example.usta_app.core.domain"
 }
 
 dependencies {

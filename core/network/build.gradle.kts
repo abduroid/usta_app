@@ -1,7 +1,7 @@
 plugins {
-    alias(libs.plugins.kallapp.android.library)
-    alias(libs.plugins.kallapp.android.library.jacoco)
-    alias(libs.plugins.kallapp.android.hilt)
+    alias(libs.plugins.ustaapp.android.library)
+    alias(libs.plugins.ustaapp.android.library.jacoco)
+    alias(libs.plugins.ustaapp.android.hilt)
     id("kotlinx-serialization")
     id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
 }
@@ -10,7 +10,7 @@ android {
     buildFeatures {
         buildConfig = true
     }
-    namespace = "com.example.kallapp.core.network"
+    namespace = "com.example.usta_app.core.network"
     testOptions {
         unitTests {
             isIncludeAndroidResources = true

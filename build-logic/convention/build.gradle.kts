@@ -4,7 +4,7 @@ plugins {
     `kotlin-dsl`
 }
 
-group = "com.example.kallapp.buildlogic"
+group = "com.example.usta_app.buildlogic"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_17
@@ -34,47 +34,47 @@ tasks {
 gradlePlugin {
     plugins {
         register("androidApplicationCompose") {
-            id = "kallapp.android.application.compose"
+            id = "usta_app.android.application.compose"
             implementationClass = "AndroidApplicationComposeConventionPlugin"
         }
         register("androidApplication") {
-            id = "kallapp.android.application"
+            id = "usta_app.android.application"
             implementationClass = "AndroidApplicationConventionPlugin"
         }
         register("androidLibraryCompose") {
-            id = "kallapp.android.library.compose"
+            id = "usta_app.android.library.compose"
             implementationClass = "AndroidLibraryComposeConventionPlugin"
         }
         register("androidFeature") {
-            id = "kallapp.android.feature"
+            id = "usta_app.android.feature"
             implementationClass = "AndroidFeatureConventionPlugin"
         }
         register("androidLibrary") {
-            id = "kallapp.android.library"
+            id = "usta_app.android.library"
             implementationClass = "AndroidLibraryConventionPlugin"
         }
         register("androidLibraryJacoco") {
-            id = "kallapp.android.library.jacoco"
+            id = "usta_app.android.library.jacoco"
             implementationClass = "AndroidLibraryJacocoConventionPlugin"
         }
         register("androidTest") {
-            id = "kallapp.android.test"
+            id = "usta_app.android.test"
             implementationClass = "AndroidTestConventionPlugin"
         }
         register("androidHilt") {
-            id = "kallapp.android.hilt"
+            id = "usta_app.android.hilt"
             implementationClass = "AndroidHiltConventionPlugin"
         }
         register("androidRoom") {
-            id = "kallapp.android.room"
+            id = "usta_app.android.room"
             implementationClass = "AndroidRoomConventionPlugin"
         }
         register("androidFlavors") {
-            id = "kallapp.android.application.flavors"
+            id = "usta_app.android.application.flavors"
             implementationClass = "AndroidApplicationFlavorsConventionPlugin"
         }
         register("jvmLibrary") {
-            id = "kallapp.jvm.library"
+            id = "usta_app.jvm.library"
             implementationClass = "JvmLibraryConventionPlugin"
         }
     }

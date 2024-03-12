@@ -1,12 +1,12 @@
 plugins {
-    alias(libs.plugins.kallapp.android.library)
-    alias(libs.plugins.kallapp.android.library.jacoco)
-    alias(libs.plugins.kallapp.android.hilt)
+    alias(libs.plugins.ustaapp.android.library)
+    alias(libs.plugins.ustaapp.android.library.jacoco)
+    alias(libs.plugins.ustaapp.android.hilt)
     id("kotlinx-serialization")
 }
 
 android {
-    namespace = "com.example.kallapp.core.data"
+    namespace = "com.example.usta_app.core.data"
     testOptions {
         unitTests {
             isIncludeAndroidResources = true

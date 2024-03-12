@@ -1,14 +1,14 @@
 plugins {
-    alias(libs.plugins.kallapp.android.library)
-    alias(libs.plugins.kallapp.android.library.jacoco)
-    alias(libs.plugins.kallapp.android.hilt)
+    alias(libs.plugins.ustaapp.android.library)
+    alias(libs.plugins.ustaapp.android.library.jacoco)
+    alias(libs.plugins.ustaapp.android.hilt)
 }
 
 android {
     defaultConfig {
         consumerProguardFiles("consumer-proguard-rules.pro")
     }
-    namespace = "com.example.kallapp.core.datastore"
+    namespace = "com.example.usta_app.core.datastore"
     testOptions {
         unitTests {
             isReturnDefaultValues = true

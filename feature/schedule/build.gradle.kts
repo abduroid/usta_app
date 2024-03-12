@@ -1,11 +1,11 @@
 plugins {
-    alias(libs.plugins.kallapp.android.feature)
-    alias(libs.plugins.kallapp.android.library.compose)
-    alias(libs.plugins.kallapp.android.library.jacoco)
+    alias(libs.plugins.ustaapp.android.feature)
+    alias(libs.plugins.ustaapp.android.library.compose)
+    alias(libs.plugins.ustaapp.android.library.jacoco)
 }
 
 android {
-    namespace = "com.example.kallapp.feature.schedule"
+    namespace = "com.example.usta_app.feature.schedule"
 }
 
 dependencies {
