@@ -8,9 +8,9 @@ plugins {
 android {
     defaultConfig {
         testInstrumentationRunner =
-            "com.example.usta_app.core.testing.UstaTestRunner"
+            "com.example.ustaapp.core.testing.UstaTestRunner"
     }
-    namespace = "com.example.usta_app.core.database"
+    namespace = "com.example.ustaapp.core.database"
 }
 
 dependencies {

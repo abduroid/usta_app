@@ -107,14 +107,14 @@ roborazzi = { id = "io.github.takahirom.roborazzi", version.ref = "roborazzi" }
 
 
 # Plugins defined by this project
-ustaapp-android-application = { id = "usta_app.android.application", version = "unspecified" }
-ustaapp-android-application-compose = { id = "usta_app.android.application.compose", version = "unspecified" }
-ustaapp-android-application-flavors = { id = "usta_app.android.application.flavors", version = "unspecified" }
-ustaapp-android-feature = { id = "usta_app.android.feature", version = "unspecified" }
-ustaapp-android-hilt = { id = "usta_app.android.hilt", version = "unspecified" }
-ustaapp-jvm-library = { id = "usta_app.jvm.library", version = "unspecified" }
-ustaapp-android-library = { id = "usta_app.android.library", version = "unspecified" }
-ustaapp-android-library-compose = { id = "usta_app.android.library.compose", version = "unspecified" }
-ustaapp-android-library-jacoco = { id = "usta_app.android.library.jacoco", version = "unspecified" }
-ustaapp-android-room = { id = "usta_app.android.room", version = "unspecified" }
+ustaapp-android-application = { id = "ustaapp.android.application", version = "unspecified" }
+ustaapp-android-application-compose = { id = "ustaapp.android.application.compose", version = "unspecified" }
+ustaapp-android-application-flavors = { id = "ustaapp.android.application.flavors", version = "unspecified" }
+ustaapp-android-feature = { id = "ustaapp.android.feature", version = "unspecified" }
+ustaapp-android-hilt = { id = "ustaapp.android.hilt", version = "unspecified" }
+ustaapp-jvm-library = { id = "ustaapp.jvm.library", version = "unspecified" }
+ustaapp-android-library = { id = "ustaapp.android.library", version = "unspecified" }
+ustaapp-android-library-compose = { id = "ustaapp.android.library.compose", version = "unspecified" }
+ustaapp-android-library-jacoco = { id = "ustaapp.android.library.jacoco", version = "unspecified" }
+ustaapp-android-room = { id = "ustaapp.android.room", version = "unspecified" }
 

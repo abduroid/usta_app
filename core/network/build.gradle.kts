@@ -10,7 +10,7 @@ android {
     buildFeatures {
         buildConfig = true
     }
-    namespace = "com.example.usta_app.core.network"
+    namespace = "com.example.ustaapp.core.network"
     testOptions {
         unitTests {
             isIncludeAndroidResources = true

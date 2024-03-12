@@ -9,7 +9,7 @@ android {
     defaultConfig {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-    namespace = "com.example.usta_app.core.designsystem"
+    namespace = "com.example.ustaapp.core.designsystem"
 }
 
 dependencies {

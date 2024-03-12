@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.usta_app.feature.schedule"
+    namespace = "com.example.ustaapp.feature.schedule"
 }
 
 dependencies {

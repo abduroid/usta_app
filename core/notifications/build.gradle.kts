@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.usta_app.core.notifications"
+    namespace = "com.example.ustaapp.core.notifications"
 }
 
 dependencies {

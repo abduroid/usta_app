@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.usta_app.core.data"
+    namespace = "com.example.ustaapp.core.data"
     testOptions {
         unitTests {
             isIncludeAndroidResources = true

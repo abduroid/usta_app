@@ -8,7 +8,7 @@ android {
     defaultConfig {
         consumerProguardFiles("consumer-proguard-rules.pro")
     }
-    namespace = "com.example.usta_app.core.datastore"
+    namespace = "com.example.ustaapp.core.datastore"
     testOptions {
         unitTests {
             isReturnDefaultValues = true

@@ -1,4 +1,4 @@
-import com.example.usta_app.UstaBuildType
+import com.example.ustaapp.UstaBuildType
 
 plugins {
     alias(libs.plugins.ustaapp.android.application)

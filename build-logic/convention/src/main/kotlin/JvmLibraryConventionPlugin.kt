@@ -1,4 +1,4 @@
-import com.example.usta_app.configureKotlinJvm
+import com.example.ustaapp.configureKotlinJvm
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 

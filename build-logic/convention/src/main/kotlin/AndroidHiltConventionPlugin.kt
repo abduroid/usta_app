@@ -14,7 +14,7 @@
  *   limitations under the License.
  */
 
-import com.example.usta_app.libs
+import com.example.ustaapp.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.dependencies

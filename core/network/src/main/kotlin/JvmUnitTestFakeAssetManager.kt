@@ -1,5 +1,5 @@
 import androidx.annotation.VisibleForTesting
-import com.example.usta_app.core.network.fake.FakeAssetManager
+import com.example.ustaapp.core.network.fake.FakeAssetManager
 import java.io.File
 import java.io.InputStream
 import java.util.Properties

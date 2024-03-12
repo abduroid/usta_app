@@ -1,6 +1,6 @@
 import com.android.build.gradle.LibraryExtension
-import com.example.usta_app.configureFlavors
-import com.example.usta_app.configureKotlinAndroid
+import com.example.ustaapp.configureFlavors
+import com.example.ustaapp.configureKotlinAndroid
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure

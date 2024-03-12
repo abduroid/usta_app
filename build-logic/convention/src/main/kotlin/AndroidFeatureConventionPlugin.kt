@@ -1,5 +1,5 @@
 import com.android.build.gradle.LibraryExtension
-import com.example.usta_app.libs
+import com.example.ustaapp.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
@@ -9,13 +9,13 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
             pluginManager.apply {
-                apply("usta_app.android.library")
-                apply("usta_app.android.hilt")
+                apply("ustaapp.android.library")
+                apply("ustaapp.android.hilt")
             }
             extensions.configure<LibraryExtension> {
                 defaultConfig {
                     testInstrumentationRunner =
-                        "com.example.usta_app.core.testing.UstaTestRunner"
+                        "com.example.ustaapp.core.testing.UstaTestRunner"
                 }
 //                configureGradleManagedDevices(this)
             }

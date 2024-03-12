@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.usta_app.core.datastore.proto"
+    namespace = "com.example.ustaapp.core.datastore.proto"
 }
 
 // Setup protobuf configuration, generating lite Java and Kotlin classes

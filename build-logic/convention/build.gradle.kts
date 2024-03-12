@@ -4,7 +4,7 @@ plugins {
     `kotlin-dsl`
 }
 
-group = "com.example.usta_app.buildlogic"
+group = "com.example.ustaapp.buildlogic"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_17
@@ -34,47 +34,47 @@ tasks {
 gradlePlugin {
     plugins {
         register("androidApplicationCompose") {
-            id = "usta_app.android.application.compose"
+            id = "ustaapp.android.application.compose"
             implementationClass = "AndroidApplicationComposeConventionPlugin"
         }
         register("androidApplication") {
-            id = "usta_app.android.application"
+            id = "ustaapp.android.application"
             implementationClass = "AndroidApplicationConventionPlugin"
         }
         register("androidLibraryCompose") {
-            id = "usta_app.android.library.compose"
+            id = "ustaapp.android.library.compose"
             implementationClass = "AndroidLibraryComposeConventionPlugin"
         }
         register("androidFeature") {
-            id = "usta_app.android.feature"
+            id = "ustaapp.android.feature"
             implementationClass = "AndroidFeatureConventionPlugin"
         }
         register("androidLibrary") {
-            id = "usta_app.android.library"
+            id = "ustaapp.android.library"
             implementationClass = "AndroidLibraryConventionPlugin"
         }
         register("androidLibraryJacoco") {
-            id = "usta_app.android.library.jacoco"
+            id = "ustaapp.android.library.jacoco"
             implementationClass = "AndroidLibraryJacocoConventionPlugin"
         }
         register("androidTest") {
-            id = "usta_app.android.test"
+            id = "ustaapp.android.test"
             implementationClass = "AndroidTestConventionPlugin"
         }
         register("androidHilt") {
-            id = "usta_app.android.hilt"
+            id = "ustaapp.android.hilt"
             implementationClass = "AndroidHiltConventionPlugin"
         }
         register("androidRoom") {
-            id = "usta_app.android.room"
+            id = "ustaapp.android.room"
             implementationClass = "AndroidRoomConventionPlugin"
         }
         register("androidFlavors") {
-            id = "usta_app.android.application.flavors"
+            id = "ustaapp.android.application.flavors"
             implementationClass = "AndroidApplicationFlavorsConventionPlugin"
         }
         register("jvmLibrary") {
-            id = "usta_app.jvm.library"
+            id = "ustaapp.jvm.library"
             implementationClass = "JvmLibraryConventionPlugin"
         }
     }

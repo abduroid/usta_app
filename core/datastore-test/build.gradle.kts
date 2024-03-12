@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.usta_app.core.datastore.test"
+    namespace = "com.example.ustaapp.core.datastore.test"
 }
 
 dependencies {

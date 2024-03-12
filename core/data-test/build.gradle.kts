@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.usta_app.core.data.test"
+    namespace = "com.example.ustaapp.core.data.test"
 }
 
 dependencies {

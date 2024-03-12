@@ -8,7 +8,7 @@ android {
     defaultConfig {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-    namespace = "com.example.usta_app.core.ui"
+    namespace = "com.example.ustaapp.core.ui"
 }
 
 dependencies {

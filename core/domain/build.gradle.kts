@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.usta_app.core.domain"
+    namespace = "com.example.ustaapp.core.domain"
 }
 
 dependencies {

@@ -1,5 +1,5 @@
 import com.android.build.api.dsl.ApplicationExtension
-import com.example.usta_app.configureKotlinAndroid
+import com.example.ustaapp.configureKotlinAndroid
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure

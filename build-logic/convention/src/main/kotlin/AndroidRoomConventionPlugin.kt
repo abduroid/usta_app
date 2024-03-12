@@ -15,7 +15,7 @@
  */
 
 import androidx.room.gradle.RoomExtension
-import com.example.usta_app.libs
+import com.example.ustaapp.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
