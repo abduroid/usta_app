@@ -6,7 +6,7 @@ import org.threeten.bp.LocalDate
 
 interface ScheduleRepository {
 
-    fun getSchedule(
+    fun getScheduleStream(
         from: LocalDate,
         to: LocalDate,
     ): Flow<List<Appointment>>

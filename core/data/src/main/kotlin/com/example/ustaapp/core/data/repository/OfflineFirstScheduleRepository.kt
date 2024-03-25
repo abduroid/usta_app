@@ -17,7 +17,7 @@ internal class OfflineFirstScheduleRepository @Inject constructor(
     private val network: UstaNetworkDataSource,
 ) : ScheduleRepository {
 
-    override fun getSchedule(from: LocalDate, to: LocalDate): Flow<List<Appointment>> =
+    override fun getScheduleStream(from: LocalDate, to: LocalDate): Flow<List<Appointment>> =
         scheduleDao.getAppointments().map { it.map(AppointmentEntity::asExternalModel) }
 
     override suspend fun refreshSchedule(from: LocalDate, to: LocalDate) {

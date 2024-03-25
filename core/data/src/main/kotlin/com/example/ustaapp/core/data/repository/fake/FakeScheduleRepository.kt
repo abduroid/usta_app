@@ -21,7 +21,7 @@ class FakeScheduleRepository @Inject constructor(
     private val dataSource: FakeUstaNetworkDataSource,
 ) : ScheduleRepository {
 
-    override fun getSchedule(from: LocalDate, to: LocalDate): Flow<List<Appointment>> =
+    override fun getScheduleStream(from: LocalDate, to: LocalDate): Flow<List<Appointment>> =
         flow {
             emit(
                 dataSource.getSchedule(from, to)

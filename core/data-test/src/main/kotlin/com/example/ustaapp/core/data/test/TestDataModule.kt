@@ -3,6 +3,7 @@ package com.example.ustaapp.core.data.test
 import com.example.ustaapp.core.data.di.DataModule
 import com.example.ustaapp.core.data.repository.ScheduleRepository
 import com.example.ustaapp.core.data.repository.fake.FakeScheduleRepository
+import com.example.ustaapp.core.data.util.NetworkMonitor
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.components.SingletonComponent
@@ -19,4 +20,9 @@ interface TestDataModule {
     fun bindsScheduleRepository(
         fakeScheduleRepository: FakeScheduleRepository,
     ): ScheduleRepository
+
+    @Binds
+    fun bindsNetworkMonitor(
+        networkMonitor: AlwaysOnlineNetworkMonitor,
+    ): NetworkMonitor
 }
