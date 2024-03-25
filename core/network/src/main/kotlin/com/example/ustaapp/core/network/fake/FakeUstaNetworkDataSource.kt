@@ -24,4 +24,12 @@ class FakeUstaNetworkDataSource @Inject constructor(
         withContext(ioDispatcher) {
             assets.open("appointments.json").use(networkJson::decodeFromStream)
         }
+
+    override suspend fun requestVerificationCode(phoneNumber: String) {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun confirmVerificationCode(code: String) {
+        TODO("Not yet implemented")
+    }
 }

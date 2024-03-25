@@ -1,3 +1,5 @@
+package com.example.ustaapp.core.network.di
+
 import android.content.Context
 import com.example.ustaapp.core.network.BuildConfig
 import com.example.ustaapp.core.network.fake.FakeAssetManager
@@ -34,7 +36,7 @@ internal object NetworkModule {
         .addInterceptor(
             HttpLoggingInterceptor()
                 .apply {
-                    if (com.example.ustaapp.core.network.BuildConfig.DEBUG) {
+                    if (BuildConfig.DEBUG) {
                         setLevel(HttpLoggingInterceptor.Level.BODY)
                     }
                 },

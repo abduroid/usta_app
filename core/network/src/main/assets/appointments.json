@@ -1,43 +1,41 @@
-{
-  "data": [
-    {
-      "id": "32d7e605-4faf-426d-bdcf-4288e83b5128",
-      "barber_id": "db048865-9a7f-4c0c-99e1-9c2d6a773381",
-      "barber_first_name": "Mikro",
-      "barber_last_name": "Mikro",
-      "client_id": "b10270bc-65ca-415a-ada2-a1772cf28ab0",
-      "client_first_name": "Abdulaziz",
-      "client_last_name": "Abduqodirov",
-      "created_date": "2024-03-11T17:20:13",
-      "date": "2024-03-11",
-      "end_time": 17.5,
-      "start_time": 17.0
-    },
-    {
-      "id": "356d0be9-8cc5-47b1-bec4-609621db53fe",
-      "barber_id": "db048865-9a7f-4c0c-99e1-9c2d6a773381",
-      "barber_first_name": "Mikro",
-      "barber_last_name": "Mikro",
-      "client_id": "b10270bc-65ca-415a-ada2-a1772cf28ab0",
-      "client_first_name": "Abdulaziz",
-      "client_last_name": "Abduqodirov",
-      "created_date": "2024-02-15T17:18:29",
-      "date": "2024-03-11",
-      "end_time": 11.5,
-      "start_time": 11.0
-    },
-    {
-      "id": "b9f3eb08-be91-424b-a69f-7d1829866a1e",
-      "barber_id": "db048865-9a7f-4c0c-99e1-9c2d6a773381",
-      "barber_first_name": "Mikro",
-      "barber_last_name": "Mikro",
-      "client_id": "b10270bc-65ca-415a-ada2-a1772cf28ab0",
-      "client_first_name": "Abdulaziz",
-      "client_last_name": "Abduqodirov",
-      "created_date": "2024-02-15T17:31:52",
-      "date": "2024-02-15",
-      "end_time": 18.5,
-      "start_time": 18.0
-    }
-  ]
-}
+[
+  {
+    "id": "32d7e605-4faf-426d-bdcf-4288e83b5128",
+    "barber_id": "db048865-9a7f-4c0c-99e1-9c2d6a773381",
+    "barber_first_name": "Mikro",
+    "barber_last_name": "Mikro",
+    "client_id": "b10270bc-65ca-415a-ada2-a1772cf28ab0",
+    "client_first_name": "Abdulaziz",
+    "client_last_name": "Abduqodirov",
+    "created_date": "2024-03-11T17:20:13",
+    "date": "2024-03-11",
+    "end_time": 17.5,
+    "start_time": 17.0
+  },
+  {
+    "id": "356d0be9-8cc5-47b1-bec4-609621db53fe",
+    "barber_id": "db048865-9a7f-4c0c-99e1-9c2d6a773381",
+    "barber_first_name": "Mikro",
+    "barber_last_name": "Mikro",
+    "client_id": "b10270bc-65ca-415a-ada2-a1772cf28ab0",
+    "client_first_name": "Abdulaziz",
+    "client_last_name": "Abduqodirov",
+    "created_date": "2024-02-15T17:18:29",
+    "date": "2024-03-11",
+    "end_time": 11.5,
+    "start_time": 11.0
+  },
+  {
+    "id": "b9f3eb08-be91-424b-a69f-7d1829866a1e",
+    "barber_id": "db048865-9a7f-4c0c-99e1-9c2d6a773381",
+    "barber_first_name": "Mikro",
+    "barber_last_name": "Mikro",
+    "client_id": "b10270bc-65ca-415a-ada2-a1772cf28ab0",
+    "client_first_name": "Abdulaziz",
+    "client_last_name": "Abduqodirov",
+    "created_date": "2024-02-15T17:31:52",
+    "date": "2024-02-15",
+    "end_time": 18.5,
+    "start_time": 18.0
+  }
+]
