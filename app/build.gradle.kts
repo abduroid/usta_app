@@ -48,6 +48,16 @@ android {
 }
 
 dependencies {
+    implementation(projects.feature.schedule)
+    implementation(projects.feature.requests)
+    implementation(projects.feature.settings)
+
+    implementation(projects.core.common)
+    implementation(projects.core.ui)
+    implementation(projects.core.designsystem)
+    implementation(projects.core.data)
+    implementation(projects.core.model)
+
 
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.core.ktx)
@@ -59,4 +69,14 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.testManifest)
 
     kspTest(libs.hilt.compiler)
+
+    testImplementation(projects.core.dataTest)
+    testImplementation(projects.core.testing)
+    testImplementation(libs.hilt.android.testing)
+
+    androidTestImplementation(projects.core.testing)
+    androidTestImplementation(projects.core.dataTest)
+    androidTestImplementation(projects.core.datastoreTest)
+    androidTestImplementation(libs.androidx.navigation.testing)
+    androidTestImplementation(libs.hilt.android.testing)
 }
