@@ -34,3 +34,5 @@ include(":core:notifications")
 include(":core:ui")
 
 include(":feature:schedule")
+include(":feature:requests")
+include(":feature:settings")

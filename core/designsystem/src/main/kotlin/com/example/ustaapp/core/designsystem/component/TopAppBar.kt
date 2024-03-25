@@ -24,8 +24,8 @@ import com.example.ustaapp.core.designsystem.icon.UstaIcons
 @Composable
 fun UstaTopAppBar(
     @StringRes titleRes: Int,
-    navigationIcon: ImageVector,
-    navigationIconContentDescription: String,
+//    navigationIcon: ImageVector,
+//    navigationIconContentDescription: String,
     actionIcon: ImageVector,
     actionIconContentDescription: String,
     modifier: Modifier = Modifier,
@@ -35,15 +35,15 @@ fun UstaTopAppBar(
 ) {
     CenterAlignedTopAppBar(
         title = { Text(text = stringResource(id = titleRes)) },
-        navigationIcon = {
-            IconButton(onClick = onNavigationClick) {
-                Icon(
-                    imageVector = navigationIcon,
-                    contentDescription = navigationIconContentDescription,
-                    tint = MaterialTheme.colorScheme.onSurface,
-                )
-            }
-        },
+//        navigationIcon = {
+//            IconButton(onClick = onNavigationClick) {
+//                Icon(
+//                    imageVector = navigationIcon,
+//                    contentDescription = navigationIconContentDescription,
+//                    tint = MaterialTheme.colorScheme.onSurface,
+//                )
+//            }
+//        },
         actions = {
             IconButton(onClick = onActionClick) {
                 Icon(
@@ -64,8 +64,8 @@ fun UstaTopAppBar(
 private fun UstaTopAppBarPreview() {
     UstaTopAppBar(
         titleRes = R.string.untitled,
-        navigationIcon = UstaIcons.Search,
-        navigationIconContentDescription = "Navigation icon",
+//        navigationIcon = UstaIcons.Search,
+//        navigationIconContentDescription = "Navigation icon",
         actionIcon = UstaIcons.MoreVert,
         actionIconContentDescription = "Action icon",
     )
