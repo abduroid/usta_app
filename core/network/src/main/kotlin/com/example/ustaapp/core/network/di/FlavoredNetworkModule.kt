@@ -1,8 +1,8 @@
 package com.example.ustaapp.core.network.di
 
 import com.example.ustaapp.core.network.UstaNetworkDataSource
-import com.example.ustaapp.core.network.fake.FakeTokenManager
-import com.example.ustaapp.core.network.fake.FakeUstaNetworkDataSource
+import com.example.ustaapp.core.network.retrofit.RetrofitUstaNetwork
+import com.example.ustaapp.core.network.token.PersistentTokenManager
 import com.example.ustaapp.core.network.token.TokenManager
 import dagger.Binds
 import dagger.Module
@@ -14,8 +14,8 @@ import dagger.hilt.components.SingletonComponent
 interface FlavoredNetworkModule {
 
     @Binds
-    fun bindsNetworkDataSource(impl: FakeUstaNetworkDataSource): UstaNetworkDataSource
+    fun bindsNetworkDataSource(retrofitUstaNetwork: RetrofitUstaNetwork): UstaNetworkDataSource
 
     @Binds
-    fun bindsTokenManager(impl: FakeTokenManager): TokenManager
+    fun bindsTokenManager(tokenManager: PersistentTokenManager): TokenManager
 }

@@ -23,8 +23,11 @@ android {
     buildTypes {
         debug {
             applicationIdSuffix = UstaBuildType.DEBUG.applicationIdSuffix
+            manifestPlaceholders["securityConfig"] = "@xml/network_security_config_dev"
+
         }
         val release = getByName("release") {
+            manifestPlaceholders["securityConfig"] = "@xml/network_security_config_prod"
             isMinifyEnabled = true
             applicationIdSuffix = UstaBuildType.RELEASE.applicationIdSuffix
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")

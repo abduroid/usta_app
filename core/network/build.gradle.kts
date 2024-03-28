@@ -25,6 +25,7 @@ secrets {
 dependencies {
     api(projects.core.common)
     api(projects.core.model)
+    implementation(projects.core.datastore)
 
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.okhttp.logging)
