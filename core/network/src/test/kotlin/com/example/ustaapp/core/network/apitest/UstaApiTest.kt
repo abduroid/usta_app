@@ -3,7 +3,7 @@ package com.example.ustaapp.core.network.apitest
 import JvmUnitTestFakeAssetManager
 import com.example.ustaapp.core.network.fake.FakeAssetManager
 import com.example.ustaapp.core.network.model.NetworkAppointment
-import com.example.ustaapp.core.network.retrofit.RetrofitUstaNetworkApi
+import com.example.ustaapp.core.network.retrofit.api.UstaApi
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import kotlinx.coroutines.test.runTest
 import kotlinx.serialization.ExperimentalSerializationApi
@@ -25,7 +25,7 @@ import kotlin.test.assertFailsWith
 class UstaApiTest {
 
     private lateinit var server: MockWebServer
-    private lateinit var api: RetrofitUstaNetworkApi
+    private lateinit var api: UstaApi
     private lateinit var networkJson: Json
     private lateinit var assetsManager: FakeAssetManager
     private lateinit var expectedResponse: NetworkAppointment

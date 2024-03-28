@@ -5,6 +5,7 @@ import com.example.ustaapp.core.network.Dispatcher
 import com.example.ustaapp.core.network.UstaDispatchers
 import com.example.ustaapp.core.network.UstaNetworkDataSource
 import com.example.ustaapp.core.network.model.NetworkAppointment
+import com.example.ustaapp.core.network.model.NetworkTokenPair
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.ExperimentalSerializationApi
@@ -29,7 +30,11 @@ class FakeUstaNetworkDataSource @Inject constructor(
         TODO("Not yet implemented")
     }
 
-    override suspend fun confirmVerificationCode(code: String) {
+    override suspend fun confirmVerificationCode(phoneNumber: String, code: String): NetworkTokenPair {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun refreshToken(): NetworkTokenPair {
         TODO("Not yet implemented")
     }
 }

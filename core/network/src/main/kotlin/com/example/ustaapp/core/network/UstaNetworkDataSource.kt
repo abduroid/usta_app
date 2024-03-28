@@ -1,6 +1,7 @@
 package com.example.ustaapp.core.network
 
 import com.example.ustaapp.core.network.model.NetworkAppointment
+import com.example.ustaapp.core.network.model.NetworkTokenPair
 import org.threeten.bp.LocalDate
 
 interface UstaNetworkDataSource {
@@ -8,5 +9,7 @@ interface UstaNetworkDataSource {
 
     suspend fun requestVerificationCode(phoneNumber: String)
 
-    suspend fun confirmVerificationCode(code: String)
+    suspend fun confirmVerificationCode(phoneNumber: String, code: String): NetworkTokenPair
+
+    suspend fun refreshToken(): NetworkTokenPair
 }
