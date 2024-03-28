@@ -15,8 +15,10 @@ interface AuthApi {
     ): NetworkResponse<String>
 
     @FormUrlEncoded
-    @POST(value = "confirm_verification_code")
+    @POST(value = "auth/confirm_verification_code")
     suspend fun confirmVerificationCode(
         @Field("totp") code: String,
+        @Query("phone_number") phoneNumber: String,
+        @Query("is_barber") isBarber: Byte = 1,
     ): NetworkResponse<NetworkTokenPair>
 }

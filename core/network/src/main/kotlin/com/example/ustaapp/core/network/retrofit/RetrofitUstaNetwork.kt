@@ -39,10 +39,11 @@ class RetrofitUstaNetwork @Inject constructor(
     override suspend fun confirmVerificationCode(
         phoneNumber: String,
         code: String,
-    ): NetworkTokenPair {
-        authApi.confirmVerificationCode(code)
-        TODO("Not implemented")
-    }
+    ): NetworkTokenPair =
+        authApi.confirmVerificationCode(
+            phoneNumber = phoneNumber,
+            code = code,
+        ).data
 
     override suspend fun refreshToken(): NetworkTokenPair {
         return tokenApi.refreshToken().data
