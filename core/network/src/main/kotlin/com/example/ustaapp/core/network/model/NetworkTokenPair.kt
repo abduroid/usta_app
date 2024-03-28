@@ -7,8 +7,8 @@ import kotlinx.serialization.Serializable
 data class NetworkTokenPair(
 
     @SerialName("access_token")
-    val accessToken: String,
+    val accessToken: String?,
 
     @SerialName("refresh_token")
-    val refreshToken: String,
+    val refreshToken: String?,
 )
