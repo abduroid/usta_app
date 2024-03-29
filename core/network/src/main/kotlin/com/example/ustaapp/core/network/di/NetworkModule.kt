@@ -6,6 +6,7 @@ import com.example.ustaapp.core.network.fake.FakeAssetManager
 import com.example.ustaapp.core.network.retrofit.AuthenticatedClient
 import com.example.ustaapp.core.network.retrofit.TokenRefresherClient
 import com.example.ustaapp.core.network.retrofit.UnauthenticatedClient
+import com.example.ustaapp.core.network.retrofit.UstaAuthenticator
 import com.example.ustaapp.core.network.retrofit.api.AuthApi
 import com.example.ustaapp.core.network.retrofit.api.RefreshTokenApi
 import com.example.ustaapp.core.network.retrofit.api.UstaApi
@@ -18,7 +19,6 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import kotlinx.serialization.json.Json
-import okhttp3.Interceptor
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -41,30 +41,27 @@ internal object NetworkModule {
         @ApplicationContext context: Context,
     ): FakeAssetManager = FakeAssetManager(context.assets::open)
 
+    @Provides
+    @Singleton
+    fun providesOkHttpClient(): OkHttpClient = OkHttpClient.Builder()
+        .addInterceptor(
+            HttpLoggingInterceptor()
+                .apply {
+                    if (BuildConfig.DEBUG) {
+                        setLevel(HttpLoggingInterceptor.Level.BODY)
+                    }
+                },
+        ).build()
+
     private fun retrofitBuilder(
         networkJson: Json,
-        interceptor: Interceptor? = null,
+        okHttpClient: OkHttpClient,
     ): Retrofit {
-        val okHttpClient = OkHttpClient.Builder()
-            .addInterceptor(
-                HttpLoggingInterceptor()
-                    .apply {
-                        if (BuildConfig.DEBUG) {
-                            setLevel(HttpLoggingInterceptor.Level.BODY)
-                        }
-                    },
-            )
-            .build()
-
         return Retrofit.Builder()
             .baseUrl(BuildConfig.BACKEND_URL)
             .callFactory(okHttpClient)
             .addConverterFactory(networkJson.asConverterFactory("application/json".toMediaType()))
-            .apply {
-                if (interceptor != null) {
-                    callFactory(okHttpClient.newBuilder().addInterceptor(interceptor).build())
-                }
-            }.build()
+            .build()
     }
 
     @Provides
@@ -72,7 +69,8 @@ internal object NetworkModule {
     @UnauthenticatedClient
     fun providesAuthApi(
         networkJson: Json,
-    ): AuthApi = retrofitBuilder(networkJson)
+        okHttpClient: OkHttpClient,
+    ): AuthApi = retrofitBuilder(networkJson, okHttpClient)
         .create(AuthApi::class.java)
 
     @Provides
@@ -81,7 +79,12 @@ internal object NetworkModule {
     fun providesUstaApi(
         networkJson: Json,
         interceptor: AccessTokenInterceptor,
-    ): UstaApi = retrofitBuilder(networkJson, interceptor)
+        authenticator: UstaAuthenticator,
+        okHttpClient: OkHttpClient,
+    ): UstaApi = retrofitBuilder(
+        networkJson = networkJson,
+        okHttpClient = okHttpClient.newBuilder().addInterceptor(interceptor).authenticator(authenticator).build(),
+    )
         .create(UstaApi::class.java)
 
     @Provides
@@ -89,7 +92,11 @@ internal object NetworkModule {
     @TokenRefresherClient
     fun providesRefreshTokenApi(
         interceptor: RefreshTokenInterceptor,
+        okHttpClient: OkHttpClient,
         networkJson: Json,
-    ): RefreshTokenApi = retrofitBuilder(networkJson, interceptor)
+    ): RefreshTokenApi = retrofitBuilder(
+        networkJson = networkJson,
+        okHttpClient = okHttpClient.newBuilder().addInterceptor(interceptor).build(),
+    )
         .create(RefreshTokenApi::class.java)
 }

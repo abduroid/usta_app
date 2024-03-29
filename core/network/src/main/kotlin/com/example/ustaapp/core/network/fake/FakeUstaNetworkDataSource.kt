@@ -33,8 +33,4 @@ class FakeUstaNetworkDataSource @Inject constructor(
     override suspend fun confirmVerificationCode(phoneNumber: String, code: String): NetworkTokenPair {
         TODO("Not yet implemented")
     }
-
-    override suspend fun refreshToken(): NetworkTokenPair {
-        TODO("Not yet implemented")
-    }
 }

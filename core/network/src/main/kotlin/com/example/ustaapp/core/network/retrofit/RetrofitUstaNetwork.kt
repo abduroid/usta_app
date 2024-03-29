@@ -5,7 +5,6 @@ import com.example.ustaapp.core.network.UstaNetworkDataSource
 import com.example.ustaapp.core.network.model.NetworkAppointment
 import com.example.ustaapp.core.network.model.NetworkTokenPair
 import com.example.ustaapp.core.network.retrofit.api.AuthApi
-import com.example.ustaapp.core.network.retrofit.api.RefreshTokenApi
 import com.example.ustaapp.core.network.retrofit.api.UstaApi
 import kotlinx.serialization.Serializable
 import org.threeten.bp.LocalDate
@@ -24,7 +23,6 @@ data class NetworkResponse<T>(
 @Singleton
 class RetrofitUstaNetwork @Inject constructor(
     @AuthenticatedClient private val ustaApi: UstaApi,
-    @TokenRefresherClient private val tokenApi: RefreshTokenApi,
     @UnauthenticatedClient private val authApi: AuthApi,
 ) : UstaNetworkDataSource {
 
@@ -44,8 +42,4 @@ class RetrofitUstaNetwork @Inject constructor(
             phoneNumber = phoneNumber,
             code = code,
         ).data
-
-    override suspend fun refreshToken(): NetworkTokenPair {
-        return tokenApi.refreshToken().data
-    }
 }

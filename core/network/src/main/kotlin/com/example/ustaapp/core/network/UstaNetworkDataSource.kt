@@ -10,6 +10,4 @@ interface UstaNetworkDataSource {
     suspend fun requestVerificationCode(phoneNumber: String)
 
     suspend fun confirmVerificationCode(phoneNumber: String, code: String): NetworkTokenPair
-
-    suspend fun refreshToken(): NetworkTokenPair
 }

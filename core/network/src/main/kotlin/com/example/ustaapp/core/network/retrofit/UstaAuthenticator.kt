@@ -1,6 +1,6 @@
 package com.example.ustaapp.core.network.retrofit
 
-import com.example.ustaapp.core.network.UstaNetworkDataSource
+import com.example.ustaapp.core.network.retrofit.api.RefreshTokenApi
 import com.example.ustaapp.core.network.token.TokenManager
 import kotlinx.coroutines.runBlocking
 import okhttp3.Authenticator
@@ -10,7 +10,8 @@ import okhttp3.Route
 import javax.inject.Inject
 
 class UstaAuthenticator @Inject constructor(
-    private val ustaNetworkDataSource: UstaNetworkDataSource,
+    @TokenRefresherClient
+    private val refreshTokenApi: RefreshTokenApi,
     private val tokenManager: TokenManager,
 ) : Authenticator {
     override fun authenticate(route: Route?, response: Response): Request? {
