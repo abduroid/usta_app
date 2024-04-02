@@ -10,11 +10,9 @@ class RefreshTokenInterceptor @Inject constructor(
     private val tokenManager: TokenManager,
 ) : Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
-        val token = runBlocking {
-            tokenManager.getRefreshToken()
-        }
+        val token = runBlocking { tokenManager.getRefreshToken() }
         val requestBuilder = chain.request().newBuilder()
-        requestBuilder.addHeader("Authorization", "Bearer $token")
+        requestBuilder.addHeader("X-Refresh-Token", "Bearer $token")
         return chain.proceed(requestBuilder.build())
     }
 }
