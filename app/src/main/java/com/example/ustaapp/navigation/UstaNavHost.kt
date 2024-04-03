@@ -23,7 +23,7 @@ fun UstaNavHost(
         startDestination = startDestination,
         modifier = modifier,
     ) {
-        scheduleScreen(onAppointmentClick = navController::navigate)
+        scheduleScreen()
         requestsScreen(onRequestsClick = navController::navigate)
         settingsScreen()
     }

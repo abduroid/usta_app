@@ -1,41 +1,31 @@
 package com.example.ustaapp.feature.schedule
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.material3.Text
+import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-
-@Composable
-internal fun ScheduleRoute(
-    onAppointmentClick: (String) -> Unit,
-    modifier: Modifier = Modifier,
-    viewmodel: ScheduleViewModel = hiltViewModel(),
-) {
-    val scheduleState by viewmodel.uiState.collectAsStateWithLifecycle()
-
-    ScheduleScreen(scheduleState = scheduleState, onAppointmentClick = onAppointmentClick)
-}
+import com.example.ustaapp.core.ui.DisposableScreen
+import com.example.ustaapp.core.ui.MviIntent
+import kotlinx.coroutines.flow.MutableSharedFlow
 
 @Composable
 internal fun ScheduleScreen(
-    scheduleState: ScheduleUiState,
-    onAppointmentClick: (String) -> Unit,
+    modifier: Modifier = Modifier,
+    viewmodel: ScheduleViewModel = hiltViewModel(),
+) {
+    DisposableScreen(viewmodel) {
+        val state by viewmodel.state.collectAsStateWithLifecycle()
+        ScheduleContent(state = state, intents = viewmodel.intents)
+    }
+}
+
+@Composable
+internal fun ScheduleContent(
+    state: ScheduleState,
+    intents: MutableSharedFlow<MviIntent>,
     modifier: Modifier = Modifier,
 ) {
-    when (scheduleState) {
-        ScheduleUiState.Loading -> {
-            Text(text = "Loading")
-        }
-
-        ScheduleUiState.Empty -> Text(text = "empty appointments")
-        is ScheduleUiState.Success -> {
-            Column {
-                Text(text = "success")
-                Text(text = scheduleState.appointments.firstOrNull()?.clientFirstName ?: "empty ")
-            }
-        }
-    }
+    if (state.isLoading) LinearProgressIndicator()
 }
