@@ -10,4 +10,4 @@ import javax.inject.Inject
 class ScheduleViewModel @Inject constructor(
     private val savedStateHandle: SavedStateHandle,
     store: MviStore<ScheduleState>,
-) : BaseViewModel<ScheduleState>(store)
+) : BaseViewModel<ScheduleState>(savedStateHandle, store)

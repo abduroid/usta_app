@@ -1,9 +1,11 @@
 package com.example.ustaapp.core.ui
 
+import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.CoroutineScope
 
 abstract class BaseViewModel<State : MviState>(
+    private val savedStateHandle: SavedStateHandle,
     private val store: MviStore<State>,
 ) : ViewModel() {
 
@@ -19,7 +21,7 @@ abstract class BaseViewModel<State : MviState>(
 
         store.init(
             coroutineScope = coroutineScope,
-//            savedStateHandle = savedStateHandle,
+            savedStateHandle = savedStateHandle,
         )
 
         if (!restoredFromState) {

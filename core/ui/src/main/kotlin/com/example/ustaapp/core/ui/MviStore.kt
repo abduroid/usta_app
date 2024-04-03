@@ -1,6 +1,7 @@
 package com.example.ustaapp.core.ui
 
 import android.util.Log
+import androidx.lifecycle.SavedStateHandle
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -51,7 +52,7 @@ class MviStore<State : MviState>(
 
     fun init(
         coroutineScope: CoroutineScope,
-//        savedStateHandle: SavedStateHandle
+        savedStateHandle: SavedStateHandle,
     ) {
         intents
             .onSubscription {

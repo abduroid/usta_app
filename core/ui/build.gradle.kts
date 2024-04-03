@@ -14,6 +14,7 @@ android {
 dependencies {
     api(projects.core.designsystem)
     api(projects.core.model)
+    implementation(libs.androidx.lifecycle.viewModelCompose)
 
     androidTestImplementation(projects.core.testing)
 }
