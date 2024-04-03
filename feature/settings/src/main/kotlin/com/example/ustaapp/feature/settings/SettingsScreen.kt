@@ -6,23 +6,22 @@ import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
 
 @Composable
-internal fun SettingsRoute(
+internal fun SettingsScreen(
     modifier: Modifier = Modifier,
     viewModel: SettingsViewModel = hiltViewModel(),
 ) {
 }
 
 @Composable
-internal fun SettingsScreen(
-    settingsUiState: SettingsUiState,
-    onRequestClick: (String) -> Unit,
+internal fun SettingsContent(
+    state: SettingsUiState,
     modifier: Modifier = Modifier,
 ) {
-    when (settingsUiState) {
+    when (state) {
         SettingsUiState.Empty -> Text(text = "empty requests")
         SettingsUiState.Loading -> Text(text = "Loading requests")
         is SettingsUiState.Success -> {
-            Text(text = "Barber name is:  ${settingsUiState.userData.firstName}")
+            Text(text = "Barber name is:  ${state.userData.firstName}")
         }
     }
 }

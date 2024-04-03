@@ -6,8 +6,7 @@ import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
 
 @Composable
-internal fun RequestsRoute(
-    onRequestClick: (String) -> Unit,
+internal fun RequestsScreen(
     modifier: Modifier = Modifier,
     viewModel: RequestsViewModel = hiltViewModel(),
 ) {
@@ -15,16 +14,15 @@ internal fun RequestsRoute(
 }
 
 @Composable
-internal fun RequestsScreen(
-    requestsState: RequestsUiState,
-    onRequestClick: (String) -> Unit,
+internal fun RequestsContent(
+    state: RequestsUiState,
     modifier: Modifier = Modifier,
 ) {
-    when (requestsState) {
+    when (state) {
         RequestsUiState.Empty -> Text(text = "empty requests")
         RequestsUiState.Loading -> Text(text = "Loading requests")
         is RequestsUiState.Success -> {
-            Text(text = "First request sender id: ${requestsState.requests.first().senderId}")
+            Text(text = "First request sender id: ${state.requests.first().senderId}")
         }
     }
 }
