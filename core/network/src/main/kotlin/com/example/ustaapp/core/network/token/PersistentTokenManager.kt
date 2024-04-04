@@ -1,11 +1,11 @@
 package com.example.ustaapp.core.network.token
 
-import android.util.Log
 import androidx.datastore.core.DataStore
 import com.example.ustaapp.core.datastore.Tokenpair
 import com.example.ustaapp.core.datastore.copy
 import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.flow.map
+import timber.log.Timber
 import java.io.IOException
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -23,7 +23,7 @@ class PersistentTokenManager @Inject constructor(
                 }
             }
         } catch (ioException: IOException) {
-            Log.e("TokenManager", "Failed to update access token", ioException)
+            Timber.tag("TokenManager").e(ioException, "Failed to update access token")
         }
     }
 
@@ -35,7 +35,7 @@ class PersistentTokenManager @Inject constructor(
                 }
             }
         } catch (ioException: IOException) {
-            Log.e("TokenManager", "Failed to update refresh token", ioException)
+            Timber.tag("TokenManager").e(ioException, "Failed to update refresh token")
         }
     }
 
@@ -54,7 +54,7 @@ class PersistentTokenManager @Inject constructor(
                 }
             }
         } catch (ioException: IOException) {
-            Log.e("TokenManager", "Failed to clear tokens", ioException)
+            Timber.tag("TokenManager").e(ioException, "Failed to clear tokens")
         }
     }
 }

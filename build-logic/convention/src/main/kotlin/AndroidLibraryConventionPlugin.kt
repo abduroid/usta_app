@@ -1,6 +1,7 @@
 import com.android.build.gradle.LibraryExtension
 import com.example.ustaapp.configureFlavors
 import com.example.ustaapp.configureKotlinAndroid
+import com.example.ustaapp.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
@@ -24,6 +25,7 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
                 resourcePrefix = path.split("""\W""".toRegex()).drop(1).distinct().joinToString(separator = "_").lowercase() + "_"
             }
             dependencies {
+                add("implementation", libs.findLibrary("timber").get())
                 add("testImplementation", kotlin("test"))
             }
         }

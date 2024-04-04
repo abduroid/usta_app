@@ -1,6 +1,5 @@
 package com.example.ustaapp.feature.schedule
 
-import android.util.Log
 import com.example.ustaapp.core.domain.GetScheduleUseCase
 import com.example.ustaapp.core.domain.RefreshScheduleUseCase
 import com.example.ustaapp.core.ui.GenericIntent
@@ -26,7 +25,6 @@ class GetScheduleMiddleware @Inject constructor(
         outputIntents: MutableSharedFlow<MviIntent>,
         coroutineScope: CoroutineScope,
     ) {
-        Log.d("jprq", "getschedule middleware invoked")
         intent.tryCast<GenericIntent.Init> {
             getScheduleUseCase(LocalDate.MIN, LocalDate.MAX)
                 .onEach { appointments ->

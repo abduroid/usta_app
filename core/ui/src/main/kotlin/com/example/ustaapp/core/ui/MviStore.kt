@@ -1,6 +1,5 @@
 package com.example.ustaapp.core.ui
 
-import android.util.Log
 import androidx.lifecycle.SavedStateHandle
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -56,7 +55,6 @@ class MviStore<State : MviState>(
     ) {
         intents
             .onSubscription {
-                Log.d("jprq", "onSubscription")
                 intents.emit(GenericIntent.Init)
             }
             .onEach {
@@ -68,13 +66,11 @@ class MviStore<State : MviState>(
                 }
             }
             .onEach { intent ->
-                Log.d("MviStore intents::onEach", "ACTION: ${intent.javaClass.simpleName}")
                 middlewares.forEach {
                     it.execute(intent, state.value, intents, coroutineScope)
                 }
             }
             .onCompletion {
-                Log.d("MviStore intents::onCompletion", "Clear the STATE: ${initialState.javaClass.simpleName}")
                 state.value = initialState
             }
             .launchIn(coroutineScope)

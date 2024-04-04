@@ -40,6 +40,7 @@ junitVersion = "1.1.5"
 espressoCore = "3.5.1"
 appcompat = "1.6.1"
 material = "1.10.0"
+timber = "5.0.1"
 
 
 
@@ -87,6 +88,7 @@ roborazzi = { group = "io.github.takahirom.roborazzi", name = "roborazzi", versi
 robolectric = { group = "org.robolectric", name = "robolectric", version.ref = "robolectric" }
 javax-inject = { module = "javax.inject:javax.inject", version = "1" }
 threetenabp = { group = "com.jakewharton.threetenabp", name = "threetenabp", version.ref = "threetenabp" }
+timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
 
 
 # Dependencies of the included build-logic
